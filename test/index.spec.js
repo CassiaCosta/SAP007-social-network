@@ -6,6 +6,9 @@ import signup from '../src/pages/signup.js';
 import login from '../src/pages/login.js';
 import { register, toLogIn } from '../src/services/authentication.js';
 
+jest.mock('../src/services/authentication.js');
+jest.mock('../src/export.js');
+
 describe('register', () => {
   it('Deverá ser uma função', () => {
     expect(typeof register).toBe('function');
@@ -15,8 +18,8 @@ describe('register', () => {
 describe('register', () => {
   it('Deverá registrar corretamente', () => {
     register.mockResolvedValueOnce();
-        const name = 'Jesus Amado';
-        const email = 'ajuda@deus.com';
+        const name = 'Cássia Costa';
+        const email = 'cassiacosta@gmail.com';
         const password = '123456';
         const page = signup();
         const nameInput = page.querySelector('#name-input');
@@ -44,7 +47,7 @@ describe('login', () => {
 describe('login', () => {
   it('Deverá logar corretamente', () => {
     toLogIn.mockResolvedValueOnce();
-        const email = 'ajuda@deus.com';
+        const email = 'dayrodrigues@outlook.com';
         const password = '123456';
         const page = login();
         const emailLogin = page.querySelector('#email-input');
@@ -60,6 +63,3 @@ describe('login', () => {
     expect(toLogIn).toHaveBeenCalledTimes(1);
   });
 });
-
-jest.mock('../src/services/authentication.js');
-jest.mock('../src/export.js');
