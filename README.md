@@ -14,9 +14,9 @@
 
 ***
 
-
 ![logo](src/img/logoLaboriam.png)
 
+***
 
 ## 1. Definição do Produto
 
