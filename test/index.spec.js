@@ -1,7 +1,9 @@
-/* * @jest-environment jsdom */
+/*
+* @jest-environment jsdom
+*/
 /* eslint-disable */
-
-import { register, logged } from '../src/services/authentication.js';
+import signup from '../src/pages/signup.js';
+import { register } from '../src/services/authentication.js';
 
 describe('register', () => {
   it('Deverá ser uma função', () => {
