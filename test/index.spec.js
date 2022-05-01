@@ -3,7 +3,8 @@
 */
 /* eslint-disable */
 import signup from '../src/pages/signup.js';
-import { register } from '../src/services/authentication.js';
+import login from '../src/pages/login.js';
+import { register, toLogIn } from '../src/services/authentication.js';
 
 describe('register', () => {
   it('Deverá ser uma função', () => {
@@ -31,6 +32,32 @@ describe('register', () => {
 
     expect(register).toHaveBeenCalledWith(name, email, password);
     expect(register).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('login', () => {
+  it('Deverá ser uma função', () => {
+    expect(typeof toLogIn).toBe('function');
+  });
+});
+
+describe('login', () => {
+  it('Deverá logar corretamente', () => {
+    toLogIn.mockResolvedValueOnce();
+        const email = 'ajuda@deus.com';
+        const password = '123456';
+        const page = login();
+        const emailLogin = page.querySelector('#email-input');
+        const passwordLogin = page.querySelector('#password-input');
+        const btnLogin = page.querySelector('#enter-button');
+
+        emailLogin.value = email;
+        passwordLogin.value = password;
+        
+        btnLogin.dispatchEvent(new Event('click'));
+
+    expect(toLogIn).toHaveBeenCalledWith(email, password);
+    expect(toLogIn).toHaveBeenCalledTimes(1);
   });
 });
 

@@ -15,7 +15,7 @@ export function current() {
   return user;
 }
 
-export function login(email, password, errorPrint) {
+export function toLogIn(email, password, errorPrint) {
   const printError = errorPrint;
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
