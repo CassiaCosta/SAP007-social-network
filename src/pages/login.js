@@ -53,7 +53,7 @@ export default () => {
       errorMessage.innerHTML = ' Preencher todos os campos!';
     } else {
       errorMessage.innerHTML = ' Ocorreu algum erro! Tente novamente mais tarde.';
-    };
+    }
   });
 
   googleButton.addEventListener('click', (e) => {
@@ -64,7 +64,7 @@ export default () => {
   resetPasswordButton.addEventListener('click', (e) => {
     e.preventDefault();
     redefinePassword(emailInput.value, errorMessage);
-  })
+  });
 
   return loginArea;
 };

@@ -10,49 +10,49 @@ const init = () => {
     main.innerHTML = '';
     switch (window.location.hash) {
       case '':
-        logged((logged) => {
-          if (logged) {
+        logged((log) => {
+          if (log) {
             main.appendChild(feed());
           } else {
             main.appendChild(login());
           }
-        })
+        });
         break;
       case '#login':
-        logged((logged) => {
-          if (logged) {
+        logged((log) => {
+          if (log) {
             main.appendChild(feed());
           } else {
             main.appendChild(login());
           }
-        })
+        });
         break;
       case '#feed':
-        logged((logged) => {
-          if (logged) {
+        logged((log) => {
+          if (log) {
             main.appendChild(feed());
           } else {
             main.appendChild(login());
           }
-        })
+        });
         break;
       case '#signup':
-        logged((logged) => {
-          if (logged) {
+        logged((log) => {
+          if (log) {
             main.appendChild(feed());
           } else {
             main.appendChild(signup());
           }
-        })
+        });
         break;
       case '#publish':
-        logged((logged) => {
-          if (logged) {
+        logged((log) => {
+          if (log) {
             main.appendChild(publish());
           } else {
             main.appendChild(login());
           }
-        })
+        });
         break;
       default:
         main.appendChild(login());
@@ -61,12 +61,12 @@ const init = () => {
 };
 
 window.addEventListener('load', () => {
-  logged((logged) => {
-    if (logged) {
+  logged((log) => {
+    if (log) {
       main.appendChild(feed());
     } else {
       main.appendChild(login());
     }
-  })
+  });
   init();
 });

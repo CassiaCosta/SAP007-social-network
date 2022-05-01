@@ -1,6 +1,6 @@
-import { current, logout } from "../services/authentication.js";
-import { createPost } from "../services/firestore.js";
-import { menu } from "./components/menu.js";
+import { current, logout } from '../services/authentication.js';
+import { createPost } from '../services/firestore.js';
+import { menu } from './components/menu.js';
 
 export default () => {
   const feedPublish = document.createElement('div');
@@ -39,7 +39,7 @@ export default () => {
       createPost(messagePost.value);
       window.location.hash = '#feed';
     }
-  })
+  });
 
   const btnLogout = feedPublish.querySelector('#signout');
   btnLogout.addEventListener('click', (e) => {
