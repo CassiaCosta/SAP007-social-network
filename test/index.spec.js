@@ -1,7 +1,13 @@
-/* * @jest-environment jsdom */
+/*
+* @jest-environment jsdom
+*/
 /* eslint-disable */
+import signup from '../src/pages/signup.js';
+import login from '../src/pages/login.js';
+import { register, toLogIn } from '../src/services/authentication.js';
 
-import { register, logged } from '../src/services/authentication.js';
+jest.mock('../src/services/authentication.js');
+jest.mock('../src/export.js');
 
 describe('register', () => {
   it('Deverá ser uma função', () => {
@@ -12,8 +18,8 @@ describe('register', () => {
 describe('register', () => {
   it('Deverá registrar corretamente', () => {
     register.mockResolvedValueOnce();
-        const name = 'Jesus Amado';
-        const email = 'ajuda@deus.com';
+        const name = 'Cássia Costa';
+        const email = 'cassiacosta@gmail.com';
         const password = '123456';
         const page = signup();
         const nameInput = page.querySelector('#name-input');
@@ -32,5 +38,28 @@ describe('register', () => {
   });
 });
 
-jest.mock('../src/services/authentication.js');
-jest.mock('../src/export.js');
+describe('login', () => {
+  it('Deverá ser uma função', () => {
+    expect(typeof toLogIn).toBe('function');
+  });
+});
+
+describe('login', () => {
+  it('Deverá logar corretamente', () => {
+    toLogIn.mockResolvedValueOnce();
+        const email = 'dayrodrigues@outlook.com';
+        const password = '123456';
+        const page = login();
+        const emailLogin = page.querySelector('#email-input');
+        const passwordLogin = page.querySelector('#password-input');
+        const btnLogin = page.querySelector('#enter-button');
+
+        emailLogin.value = email;
+        passwordLogin.value = password;
+        
+        btnLogin.dispatchEvent(new Event('click'));
+
+    expect(toLogIn).toHaveBeenCalledWith(email, password);
+    expect(toLogIn).toHaveBeenCalledTimes(1);
+  });
+});

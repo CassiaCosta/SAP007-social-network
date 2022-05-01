@@ -1,4 +1,4 @@
-import { login, loginGoogle, redefinePassword } from '../services/authentication.js';
+import { toLogIn, loginGoogle, redefinePassword } from '../services/authentication.js';
 
 export default () => {
   const loginArea = document.createElement('div');
@@ -48,7 +48,7 @@ export default () => {
   enterButton.addEventListener('click', (e) => {
     e.preventDefault();
     if (emailInput.value && passwordInput.value) {
-      login(emailInput.value, passwordInput.value, errorMessage);
+      toLogIn(emailInput.value, passwordInput.value);
     } else if (emailInput.valor === '' || passwordInput.value === '') {
       errorMessage.innerHTML = ' Preencher todos os campos!';
     } else {

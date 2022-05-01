@@ -15,7 +15,7 @@ export function current() {
   return user;
 }
 
-export function login(email, password, errorPrint) {
+export function toLogIn(email, password, errorPrint) {
   const printError = errorPrint;
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
@@ -65,7 +65,7 @@ export function redefinePassword(email, errorPrint) {
     });
 }
 
-export function register(email, password, name, errorPrint) {
+export function register(name, email, password, errorPrint) {
   const printError = errorPrint;
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
@@ -91,7 +91,6 @@ export function register(email, password, name, errorPrint) {
       }
     });
 }
-
 export function logged(callback) {
   onAuthStateChanged(auth, (user) => {
     callback(user !== null);
