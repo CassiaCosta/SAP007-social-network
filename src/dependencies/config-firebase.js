@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { initializeApp, getFirestore, getAuth } from '../__mocks__/export.js';
+import { initializeApp, getFirestore, getAuth } from '../export.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCHQm4GkaSIhilU-MdYk7iItd09BUzqFA0',
