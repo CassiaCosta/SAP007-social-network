@@ -70,7 +70,7 @@ export function register(name, email, password, errorPrint) {
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
       const user = auth.currentUser;
-      const photoUser = '../../img/user-default-photo.png';
+      const photoUser = 'img/user-default-photo.png';
       updateProfile(user, {
         displayName: name,
         photoURL: photoUser,
