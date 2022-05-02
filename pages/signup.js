@@ -27,7 +27,7 @@ export default () => {
               <img src='img/icon-google.png' alt='Ícone do Google' class='google-icon'>
             </button>
           </section>
-          <p class='goToAccount'>Tem uma conta? <a href='/#login'>Conecte-se</a></p>
+          <p class='goToAccount'>Tem uma conta? <a href='./#login'>Conecte-se</a></p>
         </form>
       </div>
       <img src='img/templateFeed.png' alt='Imagem ilustrativa de celulares' class='phones-image'>
