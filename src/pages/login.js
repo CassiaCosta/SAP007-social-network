@@ -30,7 +30,7 @@ export default () => {
           <p class="createAnAccount">Não tem uma conta? <a href="/#signup">Criar conta</a></p>
         </form>
       </div>
-      <img src="../img/laboriam-phone.png" alt="Imagem ilustrativa de celulares" class="phones-image">
+      <img src="../img/templateFeed.png" alt="Imagem ilustrativa de celulares" class="phones-image">
     </div>
     <footer class="devs">
       <p>Copyright &copy Desenvolvido por:</p>
