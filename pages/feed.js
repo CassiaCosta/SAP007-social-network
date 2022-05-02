@@ -13,7 +13,7 @@ export default () => {
 
   feedHome.innerHTML = `
     <section class='header'>
-      <img src='../img/logo.png' alt='Logo Laboriam'>
+      <img src='img/logo.png' alt='Logo Laboriam'>
     </section>
     <section class='container-feed'>
       <div class='feed'>

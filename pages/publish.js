@@ -7,7 +7,7 @@ export default () => {
   feedPublish.classList.add('feedPublish');
   feedPublish.innerHTML = `
     <section class="header">
-      <img src="../img/logo.png" alt="Logo Laboriam">
+      <img src="img/logo.png" alt="Logo Laboriam">
       <section class="nav-publish">
         <h3>Criar publicação</h3>
       </section>

@@ -7,7 +7,7 @@ export default () => {
   signupArea.innerHTML = `
     <div class='container'>
       <div id='main-signup' class='main-signup'>
-        <img src='../img/logo.png' alt='Logo Laboriam' class='logo'>
+        <img src='img/logo.png' alt='Logo Laboriam' class='logo'>
         <form>
           <h2>Cadastro</h2>
           <input type='email' placeholder='Endereço de e-mail' id='email-input'>
@@ -24,13 +24,13 @@ export default () => {
           </div>
           <section class='buttons'>
             <button class='google' id='google'>
-              <img src='../img/icon-google.png' alt='Ícone do Google' class='google-icon'>
+              <img src='img/icon-google.png' alt='Ícone do Google' class='google-icon'>
             </button>
           </section>
           <p class='goToAccount'>Tem uma conta? <a href='/#login'>Conecte-se</a></p>
         </form>
       </div>
-      <img src='../img/templateFeed.png' alt='Imagem ilustrativa de celulares' class='phones-image'>
+      <img src='img/templateFeed.png' alt='Imagem ilustrativa de celulares' class='phones-image'>
     </div>
     <footer class='devs'>
       <p>Copyright &copy Desenvolvido por:</p>
