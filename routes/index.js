@@ -1,8 +1,8 @@
-import login from '../../pages/login.js';
-import feed from '../../pages/feed.js';
-import signup from '../../pages/signup.js';
-import publish from '../../pages/publish.js';
-import { logged } from '../../services/authentication.js';
+import login from '../pages/login.js';
+import feed from '../pages/feed.js';
+import signup from '../pages/signup.js';
+import publish from '../pages/publish.js';
+import { logged } from '../services/authentication.js';
 
 const main = document.querySelector('#root');
 const init = () => {
