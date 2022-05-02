@@ -7,7 +7,7 @@ export default () => {
   loginArea.innerHTML = `
     <div class="container">
       <div class="main-login">
-        <img src="../img/logo.png" alt="Logo Laboriam" class="logo">
+        <img src="img/logo.png" alt="Logo Laboriam" class="logo">
         <form>
           <h2>Login</h2>
           <input type="email" placeholder="E-mail" id="email-input">
