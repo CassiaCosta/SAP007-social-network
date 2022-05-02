@@ -162,6 +162,6 @@ Como usuário de uma rede social , gostaria de interagir nas publicações
  ## Considerações Finais
 
 - [x] O planejamento deste projeto se encontra no [Trello](https://trello.com/b/eULNHORK/social-network)
-- [x] O deploy deste projeto está hospedado no [GitPages]()
+- [x] O deploy deste projeto está hospedado no [GitPages](https://cassiacosta.github.io/SAP007-social-network/)
 
 
