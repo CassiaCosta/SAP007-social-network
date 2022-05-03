@@ -52,6 +52,7 @@ export default () => {
         usernameInput.value,
         emailInput.value,
         passwordInput.value,
+        errorMessage
       );
     } else if (
       emailInput.valor === '' || usernameInput.value === '' || passwordInput.value === '') {
