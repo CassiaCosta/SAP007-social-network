@@ -1,42 +1,45 @@
 import { toLogIn, loginGoogle, redefinePassword } from '../services/authentication.js';
+import { footerItems } from './components/footer.js';
 
 export default () => {
-  const loginArea = document.createElement('div');
-  loginArea.classList.add('login');
+  const footer = document.querySelector('.root-footer');
+  const loginArea = document.querySelector('.root');
+  // const loginArea = document.createElement('section');
+  // loginArea.classList.add('login');
 
   loginArea.innerHTML = `
-    <div class="container">
-      <div class="main-login">
+    <section class="main-login">
+      <picture>
         <img src="img/logo.png" alt="Logo Laboriam" class="logo">
-        <form>
-          <h2>Login</h2>
-          <input type="email" placeholder="E-mail" id="email-input">
-          <input type="password" placeholder="Senha" id="password-input">
-          <p id="error-message" class="error-message"></p>
-          <button type="button" id="enter-button" class="enter-button">
-            <a href="/#feed">Entrar</a>
-          </button>
-          <a id="redefine-password" class="redefine-password">Esqueceu a senha?</a>
-          <div class="login-alternative">
-            <div></div>
-            <p>OU</p>
-            <div></div>
-          </div>
-          <section class="buttons">
-            <button class="google" id="google">
-              <img src="img/icon-google.png" alt="Ícone do Google" class="google-icon">
-            </button>
-          </section>
-          <p class="createAnAccount">Não tem uma conta? <a href="./#signup">Criar conta</a></p>
-        </form>
-      </div>
+      </picture>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="E-mail" id="email-input">
+        <input type="password" placeholder="Senha" id="password-input">
+        <p id="error-message" class="error-message"></p>
+        <button type="button" id="enter-button" class="enter-button">
+          <a href="/#feed">Entrar</a>
+        </button>
+      </form>
+      <a id="redefine-password" class="redefine-password">Esqueceu a senha?</a>
+      <section class="login-alternative">
+        <div></div>
+        <p>OU</p>
+        <div></div>
+      </section>
+      <section class="buttons">
+        <button class="google" id="google">
+          <img src="img/icon-google.png" alt="Ícone do Google" class="google-icon">
+        </button>
+      </section>
+      <p class="createAnAccount">Não tem uma conta? <a href="./#signup">Criar conta</a></p>
+    </section>
+    <picture>
       <img src="img/templateFeed.png" alt="Imagem ilustrativa de celulares" class="phones-image">
-    </div>
-    <footer class="devs">
-      <p>Copyright &copy Desenvolvido por:</p>
-      <p>Cássia Costa, Dayane Rodrigues e Viviane Soares</p>
-    </footer>
+    </picture>
 `;
+
+  footer.innerHTML = footerItems;
 
   const emailInput = loginArea.querySelector('#email-input');
   const passwordInput = loginArea.querySelector('#password-input');
